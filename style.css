@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --hero-bg: #d7e7ca;
+  --hero-dark-bg: #94a67a;
+  --button-color: #467b45;
+  --text-color: #163a12;
+  --light-text-color: #829776;
+  --footer-bg: #3a6337;
+}
+.body-padding {
+  padding: 1rem 3rem;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
