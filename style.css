@@ -57,3 +57,54 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* .... */
+/* Desktop: links always visible */
+.nav-container .links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile: links hidden until toggle */
+@media (max-width: 768px) {
+  .nav-container .links {
+    display: none;
+  }
+}
+
+/* Toggle button hidden on desktop */
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    background: #f4f4f4;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .links.active {
+    display: flex; /* show when active */
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+}
