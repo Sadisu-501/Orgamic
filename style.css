@@ -44,14 +44,19 @@ a {
 .nav-container .links a {
   color: var(--text-color);
   font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 .links a:hover,
-.nav-container button:hover {
-  color: var(--light-text-color);
+.nav-container button:hover,
+.hero-text button:hover {
+  background-color: var(--text-color);
+  color: var(--nav-bg);
   transition: all 0.5s ease;
 }
 .nav-container .nav-button,
-.toggle-btn {
+.toggle-btn,
+.hero-text button {
   padding: 0.5rem 2rem;
   background-color: transparent;
   border: 1px solid var(--button-color);
@@ -69,10 +74,40 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #d7e7ca, #94a67a);
+  background: linear-gradient(to right, #d6e8c9, #3b5d0b);
+  width: 100%;
+  height: 80vh;
+  gap: 2rem;
 }
-.hero-img{
-  filter: saturate(1.5);
+.hero-img img {
+  width: 800px;
+  height: auto;
+  filter: saturate(2);
+  background: transparent;
+  transition: all 0.5s ease;
+}
+.hero-img img:hover {
+  transform: scale(1.03);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+h1 span {
+  display: block;
+  font-size: 3rem;
+  color: var(--text-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.hero-text p {
+  color: var(--text-color);
+  opacity: 0.7;
+  line-height: 1.5rem;
+}
+.hero-text button {
+  background-color: var(--button-color);
+  color: var(--nav-bg);
   width: 100%;
 }
 /* Responsive styles */
@@ -92,20 +127,38 @@ a {
     flex-direction: column;
     background: var(--hero-bg);
     position: absolute;
-    top: 70px;
+    top: 65px;
     right: 0;
-    width: 70%;
+    width: 100%;
     height: 100vh;
     padding: 1.5rem;
     border-top-left-radius: 10px;
     transition: all 0.5s ease;
+    z-index: 999;
   }
 
   .links.active {
-    display: flex; /* show when active */
+    display: flex;
   }
 
   .toggle-btn {
     display: block;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    background: linear-gradient(to top, #d6e8c9, #3b5d0b);
+  }
+  .hero-img img {
+    width: 600px;
+  }
+  .hero-text p,
+  h1 span {
+    opacity: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .hero-text {
+    text-align: center;
   }
 }
