@@ -50,7 +50,8 @@ a {
   color: var(--light-text-color);
   transition: all 0.5s ease;
 }
-.nav-container button {
+.nav-container .nav-button,
+.toggle-btn {
   padding: 0.5rem 2rem;
   background-color: transparent;
   border: 1px solid var(--button-color);
@@ -59,45 +60,45 @@ a {
 }
 .toggle-btn {
   display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-/* .... */
-/* Desktop: links always visible */
-.nav-container .links {
-  display: flex;
-  gap: 1.5rem;
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem;
 }
 
-/* Mobile: links hidden until toggle */
+/* hero styles */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #d7e7ca, #94a67a);
+}
+.hero-img{
+  filter: saturate(1.5);
+  width: 100%;
+}
+/* Responsive styles */
+/* Mobile view */
 @media (max-width: 768px) {
+  .nav-container .nav-button {
+    display: none;
+  }
   .nav-container .links {
     display: none;
   }
-}
-
-/* Toggle button hidden on desktop */
-.toggle-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
+  .nav-container h1 {
+    font-size: 0.9rem;
+  }
   .links {
     display: none;
     flex-direction: column;
-    background: #f4f4f4;
+    background: var(--hero-bg);
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
-    width: 200px;
-    padding: 1rem;
+    width: 70%;
+    height: 100vh;
+    padding: 1.5rem;
+    border-top-left-radius: 10px;
+    transition: all 0.5s ease;
   }
 
   .links.active {
