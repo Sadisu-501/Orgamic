@@ -82,9 +82,9 @@ a {
 .hero-img img {
   max-width: 700px;
   height: auto;
-  filter: saturate(2);
   background: transparent;
   transition: all 0.5s ease;
+  filter: saturate(2);
 }
 .hero-img img:hover,
 .main-card-img img:hover,
@@ -159,6 +159,34 @@ h1 span {
   font-family: poppins;
 }
 
+/* beefore footer content */
+.before-container,
+.before-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.before-card {
+  width: 550px;
+  background-color: var(--hero-dark-bg);
+  border-radius: 15px;
+}
+.before-img img {
+  max-width: 300px;
+  height: auto;
+}
+h2 span {
+  display: flex;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+.before-details button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
 /* Responsive styles */
 /* Mobile view */
 @media (max-width: 768px) {
