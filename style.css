@@ -166,11 +166,12 @@ h1 span {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .before-card {
   width: 550px;
   background-color: var(--hero-dark-bg);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .before-img img {
   max-width: 300px;
