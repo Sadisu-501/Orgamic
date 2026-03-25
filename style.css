@@ -49,14 +49,16 @@ a {
 }
 .links a:hover,
 .nav-container button:hover,
-.hero-text button:hover {
+.hero-text button:hover,
+.before-details button:hover {
   background-color: var(--text-color);
   color: var(--nav-bg);
   transition: all 0.5s ease;
 }
 .nav-container .nav-button,
 .toggle-btn,
-.hero-text button {
+.hero-text button,
+.before-details button {
   padding: 0.5rem 2rem;
   background-color: transparent;
   border: 1px solid var(--button-color);
@@ -88,8 +90,10 @@ a {
 }
 .hero-img img:hover,
 .main-card-img img:hover,
-.main-card-img:hover {
-  transform: scale(1.03);
+.main-card-img:hover,
+.before-img img:hover,
+.before-card:hover {
+  transform: scale(1.02);
 }
 
 .hero-text {
@@ -104,12 +108,14 @@ h1 span {
   color: var(--text-color);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-.hero-text p {
+.hero-text p,
+.before-details p {
   color: var(--text-color);
   opacity: 0.7;
   line-height: 1.5rem;
 }
-.hero-text button {
+.hero-text button,
+.before-details button {
   background-color: var(--button-color);
   color: var(--nav-bg);
   width: 100%;
@@ -122,6 +128,7 @@ h1 span {
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 .main-heading {
   text-align: center;
@@ -167,27 +174,38 @@ h1 span {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
+
 .before-card {
-  width: 550px;
+  width: 600px;
+  height: 400px;
   background-color: var(--hero-dark-bg);
   border-radius: 5px;
+  padding: 1rem;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: all 0.5s ease;
 }
 .before-img img {
   max-width: 300px;
   height: auto;
+  transition: all 0.5s ease;
 }
 h2 span {
   display: flex;
   margin-bottom: 0.5rem;
   color: var(--text-color);
 }
-.before-details button {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
+.before-details p {
+  max-width: 18ch;
+  margin-top: 1rem;
 }
+.before-details button {
+  margin-top: 2rem;
+}
+
 /* Responsive styles */
 /* Mobile view */
 @media (max-width: 768px) {
@@ -245,8 +263,34 @@ h2 span {
   .main-heading {
     font-size: 1.8rem;
   }
-}
+  .before-card {
+    max-width: 500px;
+    height: 400px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .card-2 {
+    flex-direction: column-reverse;
+  }
+  .before-img img {
+    max-width: 220px;
+  }
 
+  h2 span {
+    margin-bottom: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .before-details p {
+    max-width: 30ch;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .before-details button {
+    margin-top: 1rem;
+  }
+}
+/* mobile view */
 @media (max-width: 480px) {
   .hero-container {
     gap: 3rem;
