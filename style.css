@@ -206,6 +206,27 @@ h2 span {
 .before-details button {
   margin-top: 2rem;
 }
+/* footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  background-color: var(--footer-bg);
+}
+.footer-container h1, .footer-links a {
+  color: var(--nav-bg);
+}
+.footer-heading p {
+  max-width: 30ch;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
 
 /* Responsive styles */
 /* Mobile view */
@@ -308,5 +329,9 @@ h2 span {
   }
   .main-heading {
     font-size: 1.5rem;
+  }
+  .before-card {
+    max-width: 300px;
+    height: 350px;
   }
 }
